@@ -1,6 +1,6 @@
 // typing function copied from w3
 var i = 0;
-var txt = "Hey! My name is Diana and I'm a web developer.";
+var txt = "Howdy! My name is Diana and I'm a web designer and developer in progress.";
 var speed = 50;
 
 function typeWriter() {

@@ -1,3 +1,4 @@
+/* color palette */
 :root {
     --offwhite: #fcfaf8;
     --warm-beige: #e9e0da;
@@ -7,12 +8,13 @@
     --aubergine: #61638a;
     --periwinkle: #b4ccd3;
     --forest: #235563;
-    --mint: #acbeaa;
+    --mint: #c1d4bf;
     --sage: #566f56;
-    --peach: #f2ada1;
+    --peach: #e4cdc7;
     --tangerine: #e9624c;
 }
 
+/* adding fonts */
 @font-face {
     font-family: 'Cooper Std';
     src: url(../fonts/Cooper\ Std\ Black.ttf);
@@ -45,6 +47,14 @@
     src: url(../fonts/8-by-8-pixel-serif.otf);
 }
 
+/* hoping this makes my letters less chunky in safari. copied from: 
+https://theme.co/forum/t/font-weights-and-letter-spacing-way-off-on-ios-safari-and-chrome/70670/5 */
+body * { 
+    -webkit-font-smoothing: subpixel-antialiased !important; 
+    text-rendering:optimizeLegibility !important;
+}
+
+/* setting default line height and text color */
 body {
     line-height: 1.5;
     color: var(--pitch-gray);
@@ -58,20 +68,11 @@ header {
     padding: 10px;
 }
 
+/* adding drop shadows to style main header */
 header h1 {
-    font-size: 36px;
     text-shadow: 2px 2px var(--lavender), 4px 4px var(--forest);
-    
+    color: var(--pitch-gray);
 }
-
-#navLinks {
-    display: flex;
-    justify-content: space-around;
-    min-width: 275px;
-    font-family: 'Raleway Regular', sans-serif;
-    text-transform: uppercase;
-    margin-right: 10%;
-  }
 
 header nav ul li a:hover {
     color: var(--tangerine);
@@ -85,18 +86,24 @@ nav ul li a:visited {
 
 h1 {
     font-family: 'Cooper Std';
+    font-size: 36px;
+    line-height: 1.25;
 }
 
 h2 {
     font-family: 'Raleway Semibold';
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 26px;
+    color: var(--tangerine);
+    margin-bottom: 15px;;
 }
 
 h3 {
     font-family: 'Raleway Regular';
     text-transform: uppercase;
     font-size: 20px;
+    color: var(--forest);
+    margin-bottom: 20px;
 }
 
 h4 {
@@ -106,6 +113,8 @@ h4 {
 
 p {
     font-family: 'Haboro';
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 html, body, main {
@@ -117,6 +126,35 @@ article {
     height: 300px;
     background-color: var(--forest);
     margin: 20px;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5));
+}
+
+article h2 {
+    flex: 1 100%;
+}
+
+article h3 {
+    display: none;
+}
+
+article h2, article h3 {
+    color: var(--offwhite);
+}
+
+article:hover h3{
+    display: flex;
+}
+
+article a {
+    text-decoration: underline;
 }
 
 footer {
@@ -134,13 +172,6 @@ footer {
     width: auto;
 }
 
-.work-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 100%;
-}
-
 .external-links {
     display: flex;
     width: 150px;
@@ -148,6 +179,14 @@ footer {
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 25px;
+}
+
+.spacer-50 {
+    height: 50px;
+}
+
+.content {
+    padding: 40px 10% 40px 10%;
 }
 
 .phone {
@@ -161,6 +200,15 @@ footer {
 .phone-icon {
     display: none;
 }
+
+#navLinks {
+    display: flex;
+    justify-content: space-around;
+    min-width: 275px;
+    font-family: 'Raleway Regular', sans-serif;
+    text-transform: uppercase;
+    margin-right: 10%;
+  }
 
 #game-textbox {
     width: 300px;
@@ -189,6 +237,48 @@ footer {
     content: url(../images/icons/pinterest.png);
     height: 28px;
 }
+
+#about {
+    display: flex;
+    padding: 40px 15% 40px 15%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--warm-beige);
+}
+
+#about div {
+    margin: 0 15px 0 15px;
+    padding: 30px;
+}
+
+#about div h1 {
+    margin-bottom: 30px;
+}
+
+#about div img {
+    width: 175px;
+}
+
+#work {
+    background-color: var(--periwinkle);
+}
+
+#work-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+#lesfest {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(../images/lesfest.jpg);
+    background-size: cover;
+}
+
+
+
 
 @media (max-width: 768px) {
 
@@ -239,7 +329,7 @@ nav a:hover {
   }
   
     .external-links {
-        margin-bottom: 100px;
+        margin-bottom: 35%;
     }
 
     .desktop {
@@ -260,9 +350,29 @@ nav a:hover {
         width: 275px;
         height: 300px;
         /*position:absolute is carried from previous class definition */
-        top: 50%;
+        top: 35%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -35%);
         padding: 50px 20px 20px;
     }
+
+    #about {
+        flex-direction: column;
+        padding: 10%;
+    }
+
+    #about div {
+        padding: 15px;
+        width: 100%;
+        margin: 0;
+    }
+
+    #about div img {
+        display: block;
+        margin: auto;
+    }
+
+   .spacer-50 {
+        display: none;
+   }
 }

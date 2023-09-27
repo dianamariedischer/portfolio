@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content=""> <!--shows a preview image when link is shared-->
     <title>Diana Discher</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/script.js"></script>
 </head>
 
-<body>
+<body onload="typeWriter()">
     <header>
-        <h1 class="desktop">Diana Discher</h1>
-        <h1 class="phone">DD</h1>
+        <h1 class="desktop">Diana Discher</h1> <!--Header for desktop-->
+        <h1 class="phone">DD</h1> <!--Header for mobile-->
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -26,7 +28,7 @@
         <div class="hero">
             <div id="game-textbox">
                 <img src="./assets/placeholder.jpg" alt="thing" class="phone-img">
-                <div class="typewriter"><h4>I'm just a silly little lady with a penchant for whimsy.</h4></div>
+                <h4 id="demo"></h4>
             </div>
         </div>
         <section id="about">
@@ -35,11 +37,18 @@
         </section>
         <section id="work">
             <h2>Work</h2>
-                <p>This is body text. Lorem ipsum etc</p>
+                <p></p>
         </section>
         <form id="contact">
-            
+            <h2>Contact Me</h2>
+            <p>
+                <label for="username">Name:</label>
+                <!-- This element has a CSS declaration of `cursor: text` -->
+                <input id="username" type="text" placeholder="First Last" />
+              </p>
         </form>
     </main>
+
+    <footer></footer>
 </body>
 </html>

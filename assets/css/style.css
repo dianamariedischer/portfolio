@@ -1,3 +1,18 @@
+:root {
+    --offwhite: #fcfaf8;
+    --warm-beige: #e9e0da;
+    --mauve-brown: #7e6460;
+    --pitch-gray: #161313;
+    --lavender: #c4c1db;
+    --aubergine: #61638a;
+    --periwinkle: #b4ccd3;
+    --forest: #235563;
+    --mint: #acbeaa;
+    --sage: #566f56;
+    --peach: #f2ada1;
+    --tangerine: #e9624c;
+}
+
 @font-face {
     font-family: 'Cooper Std';
     src: url(../fonts/Cooper\ Std\ Black.ttf);
@@ -32,20 +47,20 @@
 
 body {
     line-height: 1.5;
-    color: #161313;
+    color: var(--pitch-gray);
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #61638a;
+    background-color: var(--aubergine);
+    padding: 10px;
 }
 
 header h1 {
     font-size: 36px;
-    margin: 3%;
-    text-shadow: 2px 2px #c4c1db, 4px 4px #235563;
+    text-shadow: 2px 2px var(--lavender), 4px 4px var(--forest);
     
 }
 
@@ -58,8 +73,14 @@ nav ul {
     margin-right: 10%;
   }
 
-nav ul li {
-    color: #fcfaf8;
+nav ul li a:hover {
+    color: var(--periwinkle);
+    text-decoration: underline;
+}
+
+nav ul li a:visited {
+    color: var(--offwhite);
+    text-decoration: underline;
 }
 
 h1 {
@@ -88,16 +109,21 @@ p {
 }
 
 html, body, main {
-    height: 100%;
+    width: 100%;
+}
+
+footer {
+    background-color: var(--aubergine);
+    height: 30px;
 }
 
 .hero{
-    background-color: #61638a;
-    height: 100%;
+    background-color: var(--aubergine);
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    width: auto;
 }
 
 .phone {
@@ -109,92 +135,29 @@ html, body, main {
 }
 
 
-/* This was copy pasted */
-@keyframes grow {
-    0% { max-height: var(--lineHeight); }
-    100% { max-height: calc(var(--lineHeight) * var(--lines)); }
-  }
-  
-  @keyframes carriageReturn {
-    0% { top: 0; }
-    100% { top: calc(var(--lineHeight) * var(--lines)); }
-  }
-  
-  @keyframes type {
-    0% { width: 100%; }
-    100% { width: 0%; }
-  }
-
-  .typewriter {
-    --bgColor: #161313;
-    --lines: 500;
-    --lineHeight: 1.5rem;
-    --timePerLine: .9s;
-    --widthCh: 22;
-    --width: calc(var(--widthCh) * 1ch);
-    /* do not touch the time property!!! */
-    --time: calc(var(--lines) * var(--timePerLine));
-    animation: grow var(--time) steps(var(--lines));
-    animation-fill-mode: forwards;
-    background: var(--bgColor);  
-    line-height: var(--lineHeight);
-    max-height: var(--lineHeight);
-    overflow: hidden;
-    position: relative;
-    width: var(--width);
-    /* word-break: break-all; */
-  }
-  
-  .typewriter::before {
-    content: "";
-    animation: 
-      type var(--timePerLine) linear infinite, 
-      carriageReturn var(--time) steps(var(--lines)) var(--lines);
-    background: var(--bgColor);
-    bottom: 0;
-    height: 2rem;
-    position: absolute;
-    right: 0;
-    width: 100%;
-  }
-/* https://dev.to/alvaromontoro/multiline-css-only-typewriter-effect-18p4 */
-
-
 #game-textbox {
     width: 300px;
     height: 150px;
     position: absolute;
-    background-color: #161313;
-    color: #fcfaf8;
-    top: 25%;
-    left: 60%;
-    border: 5px solid #fcfaf8;
-    padding-top: 20px;
-    padding-left: 50px;
+    top: 35%; 
+    right: 20%;
+    background-color: var(--pitch-gray);
+    color: var(--offwhite);
+    border: 5px solid var(--offwhite);
+    text-align: center;
+    padding: 40px;
 }
 
-#colors {
-    color: #c4c1db;
-    color: #b4ccd3;
-    color: #acbeaa;
-    color: #f2ada1;
-    color: #61638a;
-    color: #235563;
-    color: #566f56;
-    color: #e9624c;
-    color: #fcfaf8;
-    color: #e9e0da;
-    color: #7e6460;
-    color: #161313;
+@media (max-width: 768px) {
+
+    #game-textbox {
+        left: auto;
+        right: 5%;
+    }
+
 }
 
 @media (max-width: 480px) {    
-
-    
-    .hero {
-        display: flex;
-        justify-content: center;
-    }
     
     .desktop {
         display: none;
@@ -207,18 +170,16 @@ html, body, main {
     #game-textbox {
         width: 275px;
         height: 300px;
-        position: absolute;
+        /*position:absolute is carried from previous class definition */
         top: 25%;
         left: 50%;
-        transform: translate(-50%, -10%);
-        padding-top: 50px;
-        padding-left: 40px;
+        transform: translate(-50%, -25%);
+        padding: 50px 20px 20px;
     }
 
     .phone-img {
-        display: flex;
-        margin-bottom: 20px;
-        margin-left: 65px;
+        display: block;
+        margin: 0 auto 20px;
         width: 50px;
     }
 }

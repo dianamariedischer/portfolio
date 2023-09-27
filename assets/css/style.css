@@ -238,14 +238,22 @@ nav a:hover {
     color: black;
   }
   
+    .external-links {
+        margin-bottom: 45px;
+    }
 
-    
     .desktop {
         display: none;
     }
 
     .phone {
         display: flex;
+    }
+
+    .phone-img {
+        display: block;
+        margin: 0 auto 20px;
+        width: 100px;
     }
 
     #game-textbox {
@@ -256,11 +264,5 @@ nav a:hover {
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 50px 20px 20px;
-    }
-
-    .phone-img {
-        display: block;
-        margin: 0 auto 20px;
-        width: 100px;
     }
 }

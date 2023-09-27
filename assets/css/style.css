@@ -171,15 +171,15 @@ footer {
         width: 275px;
         height: 300px;
         /*position:absolute is carried from previous class definition */
-        top: 25%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, -25%);
+        transform: translate(-50%, -50%);
         padding: 50px 20px 20px;
     }
 
     .phone-img {
         display: block;
         margin: 0 auto 20px;
-        width: 50px;
+        width: 100px;
     }
 }

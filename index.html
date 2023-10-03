@@ -15,9 +15,20 @@
 
 <body onload="typeWriter()">
     <header>
-        <a href="index.html"><h1 class="desktop">Diana Discher</h1> <!--Header for desktop-->
-        <h1 class="phone">DD</h1></a> <!--Header for mobile. also both should link to the homepage-->
-        <nav>
+        <nav class="phone-block">
+            <ul id="phoneNavLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="./assets/discher-resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+        <!--Header for desktop, both headers link to home page-->
+        <div class="title-nav-container">
+        <a href="index.html"><h1 class="desktop">Diana Discher</h1> 
+        <!--Header for mobile-->
+        <h1 class="phone-flex">DD</h1></a> 
+        <nav class="desktop">
             <ul id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
@@ -25,22 +36,27 @@
                 <li><a href="./assets/discher-resume.pdf" target="_blank">Resume</a></li>
             </ul>
         </nav>
-        <a href="javascript:void(0);" class="phone-icon" onclick="myFunction()">
+        <a href="javascript:void(0);" class="phone-flex" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
+    </div>
     </header>
 
     <main>
         <div class="hero">
+            <div class="game-textbox-container">
             <div id="game-textbox">
-                <img src="./assets/pixel-portrait.png" alt="thing" class="phone-img">
+                <img src="./assets/images/pixel-portrait.png" alt="thing" class="phone-img">
                 <h4 id="demo"></h4>
             </div>
-            <ul class="external-links">
-                <li><a href="https://github.com/dianamariedischer" id="gitlink"></a></li>
-                <li><a href="https://www.linkedin.com/in/diana-discher-839672185" id="linkedin"></a></li>
-                <li><a href="https://www.pinterest.com/dianamdischer/" id="pinterest"></a></li>
-            </ul>
+        </div>
+            <div class="external-links-container">
+                <ul class="external-links">
+                    <li><a href="https://github.com/dianamariedischer" id="gitlink"></a></li>
+                    <li><a href="https://www.linkedin.com/in/diana-discher-839672185" id="linkedin"></a></li>
+                    <li><a href="https://www.pinterest.com/dianamdischer/" id="pinterest"></a></li>
+                </ul>
+            </div>
         </div>
         <section id="about">
                 <div class="right">

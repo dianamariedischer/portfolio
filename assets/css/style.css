@@ -60,7 +60,11 @@ body {
     color: var(--pitch-gray);
 }
 
-header {
+/* header {
+    
+} */
+
+.title-nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,11 +80,6 @@ header h1 {
 
 header nav ul li a:hover {
     color: var(--tangerine);
-    text-decoration: underline;
-}
-
-nav ul li a:visited {
-    color: var(--offwhite);
     text-decoration: underline;
 }
 
@@ -163,22 +162,34 @@ footer {
 }
 
 .hero{
-    display: flex;
-    background-color: var(--aubergine);
+    width: 100vw;
     height: 93vh;
+    background-color: var(--aubergine);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: auto;
+}
+
+.game-textbox-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    padding-top: 10%;
+}
+
+.external-links-container {
+    display: flex;
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    justify-content: center;
 }
 
 .external-links {
     display: flex;
     width: 150px;
-    margin: auto;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 25px;
 }
 
 .spacer-50 {
@@ -189,7 +200,11 @@ footer {
     padding: 40px 10% 40px 10%;
 }
 
-.phone {
+.phone-block {
+    display: none;
+}
+
+.phone-flex {
     display: none;
 }
 
@@ -213,9 +228,6 @@ footer {
 #game-textbox {
     width: 300px;
     height: 150px;
-    position: absolute;
-    top: 35%; 
-    right: 20%;
     background-color: var(--pitch-gray);
     color: var(--offwhite);
     border: 5px solid var(--offwhite);
@@ -282,62 +294,68 @@ footer {
 
 @media (max-width: 768px) {
 
-    #game-textbox {
+    /* #game-textbox {
         left: auto;
         right: 5%;
-    }
+    } */
 
 }
 
 @media (max-width: 480px) {  
     
 
-    /* hamburger menu copy pasted from w3 */
-    /* Style the navigation menu */
+/* hamburger menu from w3 */
+/* styling edited as well as position */
+/* Style the navigation menu */
 nav {
-    overflow: hidden;
-    background-color: #333;
-    position: absolute;
-    top: 74px;
-    z-index: 5;
-    width: 100vw;
+    background-color: var(--lavender);
   }
   
-  /* Hide the links inside the navigation menu (except for logo/home) */
-nav #navLinks {
+/* Hide the links inside the navigation menu (except for logo/home) */
+nav #phoneNavLinks {
     display: none;
   }
-  
-  /* Style navigation menu links */
+
+nav ul li {
+    border-bottom: 1px solid var(--pitch-gray);
+}
+
+/* Style navigation menu links */
 nav a {
-    color: white;
+    color: var(--pitch-gray);
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: 'Raleway Regular';
+    text-transform: uppercase;
+    text-align: center;
     display: block;
   }
   
-  /* Style the hamburger menu */
-.phone-icon {
-    display: flex;
-  }
-  
-  /* Add a grey background color on mouse-over */
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-    .external-links {
-        margin-bottom: 35%;
-    }
 
+  .game-textbox-container {
+    display: flex;
+    margin-right: auto;
+    justify-content: center;
+    padding-top: 20%;
+}
+
+.external-links-container {
+    position: relative;
+    top: 100px;
+}
+
+/* don't display elements styled for desktop */
     .desktop {
         display: none;
     }
 
-    .phone {
+    .phone-flex {
         display: flex;
+    }
+
+    .phone-block {
+        display: block;
     }
 
     .phone-img {
@@ -346,14 +364,9 @@ nav a:hover {
         width: 100px;
     }
 
+
     #game-textbox {
-        width: 275px;
         height: 300px;
-        /*position:absolute is carried from previous class definition */
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -35%);
-        padding: 50px 20px 20px;
     }
 
     #about {

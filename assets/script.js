@@ -1,6 +1,6 @@
-// typing function copied from w3
+// typewriter function copied from w3
 var i = 0;
-var txt = "Howdy! My name is Diana and I'm a web designer and developer in progress.";
+var txt = "Howdy! My name is Diana and I'm a web developer in progress.";
 var speed = 50;
 
 function typeWriter() {
@@ -11,9 +11,9 @@ function typeWriter() {
   }
 }
 
-// hamburger menu from w3
+// hamburger menu function from w3
 function myFunction() {
-  var x = document.getElementById("navLinks");
+  var x = document.getElementById("phoneNavLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {

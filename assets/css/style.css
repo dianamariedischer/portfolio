@@ -162,25 +162,31 @@ footer {
 }
 
 .hero{
-    width: 100vw;
     height: 93vh;
+    width: 100%;
     background-color: var(--aubergine);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-img {
+    height: 600px;
 }
 
 .game-textbox-container {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 10%;
-    padding-top: 10%;
+    justify-content: center;
 }
 
 .external-links-container {
     display: flex;
-    position: absolute;
-    bottom: 3%;
+    position: relative;
+    top: 40px;
     width: 100%;
     justify-content: center;
 }
@@ -294,10 +300,9 @@ footer {
 
 @media (max-width: 768px) {
 
-    /* #game-textbox {
-        left: auto;
-        right: 5%;
-    } */
+    .desktop-img {
+        height: 500px;
+    }
 
 }
 
@@ -335,18 +340,21 @@ nav a {
 
   .game-textbox-container {
     display: flex;
-    margin-right: auto;
     justify-content: center;
-    padding-top: 20%;
+    padding-top: 15%;
 }
 
 .external-links-container {
     position: relative;
-    top: 100px;
+    top: 85px;
 }
 
 /* don't display elements styled for desktop */
     .desktop {
+        display: none;
+    }
+
+    .desktop-img {
         display: none;
     }
 

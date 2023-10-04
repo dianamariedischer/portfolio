@@ -37,6 +37,16 @@ Credit to @jade in the theme.co forum for some lines of code that hopefully make
 
 https://theme.co/forum/t/font-weights-and-letter-spacing-way-off-on-ios-safari-and-chrome/70670/5
 
+Font credits:
+8x8 Pixel Serif on FontStruct by user chupztugz
+https://fontstruct.com/fontstructions/show/2325672/8-by-8-pixel-serif-1
+
+Raleway: https://fonts.google.com/specimen/Raleway
+
+Haboro: https://fonts.adobe.com/fonts/haboro
+
+Cooper Black: https://fonts.adobe.com/fonts/cooper-black
+
 ## License
 
 Please refer to the LICENSE in the repo.

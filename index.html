@@ -15,6 +15,7 @@
 
 <body onload="typeWriter()">
     <header>
+        <!-- Mobile navigation -->
         <nav class="phone-block">
             <ul id="phoneNavLinks">
                 <li><a href="#about">About</a></li>
@@ -28,6 +29,7 @@
         <a href="index.html"><h1 class="desktop">Diana Discher</h1> 
         <!--Header for mobile-->
         <h1 class="phone-flex">DD</h1></a> 
+        <!-- Desktop navigation -->
         <nav class="desktop">
             <ul id="navLinks">
                 <li><a href="#about">About</a></li>
@@ -36,6 +38,7 @@
                 <li><a href="./assets/discher-resume.pdf" target="_blank">Resume</a></li>
             </ul>
         </nav>
+        <!-- hamburger menu icon for mobile -->
         <a href="javascript:void(0);" class="phone-flex" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -43,16 +46,24 @@
     </header>
 
     <main>
+        <!-- home page with two illustrations, one that sits next to a textbox with a typing for desktop,
+        one that's in the box for mobile, as well as external links at the bottom of the page -->
         <div class="hero">
+            <!-- top section of page -->
             <div class="container">
+                <!-- desktop portrait -->
                 <img src="./assets/images/illustrated-portrait.png" alt="thing" class="desktop-img">
+                <!-- textbox with typewriter -->
                 <div class="game-textbox-container">
                     <div id="game-textbox">
+                    <!-- mobile portrait -->
                     <img src="./assets/images/pixel-portrait.png" alt="thing" class="phone-img">
+                    <!-- demo id is called by typewriter function -->
                     <h4 id="demo"></h4>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- links at the bottom of page -->
             <div class="external-links-container">
                 <ul class="external-links">
                     <li><a href="https://github.com/dianamariedischer" id="gitlink"></a></li>
@@ -61,12 +72,15 @@
                 </ul>
             </div>
         </div>
+        <!-- about section, divided in columns for desktop -->
         <section id="about">
+                <!-- right section desktop with title and header -->
                 <div class="right">
                     <h3>About</h3> 
                     <h1>It all started with...</h1>
                     <img src="./assets/images/me-circle.png" alt="A picture of me">               
                 </div>
+                <!-- left section desktop with subtitle and text -->
                 <div class="left">
                     <div class="spacer-50"></div>
                     <h2>Customization</h2>
@@ -83,9 +97,11 @@
                         the process of putting those frames together. &#40I also pick up the coffee 😇&#41</p>
                 </div>
         </section>
+        <!-- work section -->
         <section class="content" id="work">
             <h3>Work</h3>
-            <!-- <h1>My projects so far...</h1> -->
+            <h1>My projects so far...</h1>
+            <!-- project cards -->
             <div id="work-content">
                 <article id="lesfest">
                     <h2>Conference Site for Les Dutton</h2>
@@ -109,18 +125,25 @@
                 </article>
             </div>
         </section>
-        <form class="content" id="contact" action="mailto:dianamariedischer@gmail.com">
+        <!-- contact form -->
+        <div class="content" id="contact">
             <h3>Contact</h3>
             <h1>Get in touch!</h1>
-            <p>Whether you want to work together,<br> or just say hi, go for it!</p>
-            
-            <input type="text" id="name" name="name" value="Name*"><br>
-            <input type="text" id="email" email="email" value="Email*"><br>
-            <textarea name="message" rows="10" cols="20">Message*</textarea><br>
-            <input type="submit" value="Send">
-        </form>
+            <p>Whether you want to work together, or just say hi, go for it!<br> Currently the submit button will just open your default email application, updates coming soon....</p>
+            <div class="spacer-20"></div>
+            <div class="form-container">
+                <form action="mailto:dianamariedischer@gmail.com"></form>
+                    <div class="input"><input type="text" id="name" name="name" onfocus="this.value=''" value="Name*"></div><br>
+                    <div class="input"><input type="text" id="email" email="email" onfocus="this.value=''" value="Email*"></div><br>
+                    <div class="input"><textarea type="textbox" id="message" message="message" onfocus="this.value=''">Message*</textarea></div><br>
+                    <input type="submit" value="Send Email">
+                </form>
+            </div>
+        </div>
     </main>
 
-    <footer></footer>
+    <footer>
+        <p>Made by me!</p>
+    </footer>
 </body>
 </html>

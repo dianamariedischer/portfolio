@@ -321,7 +321,12 @@ article a {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)), url(../images/lesfest.jpg);
     background-size: cover;
-    width: 100%;
+}
+
+#luna {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(../images/luna-screenshot.png);
+    background-size: cover;
 }
 
 

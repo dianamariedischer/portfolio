@@ -329,6 +329,12 @@ article a {
     background-size: cover;
 }
 
+#ourspace {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(../images/ourspace-screenshot.png);
+    background-size: cover;
+}
+
 
 /* Contact Form Styling */
 
